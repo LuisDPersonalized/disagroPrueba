@@ -1,9 +1,23 @@
-import {useState} from 'react';
 import {Seleccion} from "../elementos/Seleccion";
 import styles from "./CartaProServ.module.css"
+import {useEffect, useState} from 'react';
 
+interface Productos{
+    id: number;
+    nombre:string;
+    precio:number;
+    esServicio:boolean;
+}
 export function CartaProServ(){
-    const [query, setQuery] = useState("");
+    
+    const [data,setData] = useState([])
+    useEffect(()=>{
+        fetch('http://localhost:8081/ProductosServicios')
+        .then (res => res.json())
+        .then (data=>setData(data))
+        .catch (err=> console.log(err))
+    },[])
+
     return (
         <div className={styles.cartillaArea}>
             <div className={styles.areaBusqueda}>
@@ -15,7 +29,13 @@ export function CartaProServ(){
             </div>
             <div className={styles.areaSelecciones}>
                 <span>Servicios y/o Productos seleccionados:</span>
-                <div></div>
+                <div>
+                    {data.map ((d,i) => (
+                        <div key={i}>
+                            <Seleccion id={d.id} nombre={d.nombre} precio={d.precio} esProducto={d.esProducto}/>
+                        </div>
+                    ))}
+                </div>
             </div>
             <div className={styles.descuentos}>
                 <div className={styles.areaDescuento}>
