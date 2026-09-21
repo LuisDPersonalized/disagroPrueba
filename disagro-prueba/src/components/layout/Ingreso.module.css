@@ -1,0 +1,49 @@
+.ingresoArea{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    width: 100%;
+}
+.areaGeneral{
+    width: 100%;
+}
+.areaTitulo{
+    min-height: 37px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    line-height: 14px;
+    font-weight: 700;
+}
+.circuloNumero{
+    width: 29px;
+    height: 29px;
+    flex: 0 0 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #4caf61;
+    color: #fff;
+    font-size: 16px;
+}
+.botonConfirmar{
+    background-color: #484ED9;
+    color:white;
+    border-radius:15px;
+    height: 45px;
+    width: 60%;
+
+    margin: 17px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    border: 0;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    cursor: pointer;
+}

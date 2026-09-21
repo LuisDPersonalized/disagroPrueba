@@ -1,0 +1,74 @@
+.cartillaArea{
+    height:500px;
+    width: 80%;
+    
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .10);
+    position: relative;
+}
+.cartillaConteneor{
+    width: 100%;
+}
+.areaBusqueda{
+    background-color: #3E3E3E;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 10%;
+    padding: 13px 20px;
+}
+.contenedorBuscador{
+
+    height: 29px;
+    border-radius: 17px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 13px;
+}
+.buscador{
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 0 10px 0 13px;
+}
+.imagenBuscador{
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 700;
+    transform: rotate(-20deg);
+}
+.areaSelecciones{
+    height: 73%;
+
+    overflow: auto;
+    width: 100%;
+}
+.descuentos{
+    height: 17%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    background: #3d3d3d;
+    color: #fff;
+    text-align: center;
+}
+.areaDescuento{
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 17px;
+    line-height: 18px;
+}
+.porcentual{
+    color: #4caf61;
+}
